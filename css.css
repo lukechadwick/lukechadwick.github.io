@@ -40,3 +40,9 @@ a:link {
 .question {
     font-weight: bold;
 }
+
+img.scale-with-grid,
+#content img { 
+ max-width: 100%;
+ height: auto;
+}
