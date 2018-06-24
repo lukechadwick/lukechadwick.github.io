@@ -1,0 +1,39 @@
+.nav {
+    background-color: rgb(33, 33, 33);
+    padding: 10px;
+}
+
+body {
+	background-image: url("https://images.unsplash.com/photo-1421790879237-3fd1bf6cd1bf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd849741774750e4465a3e0955a98c80&auto=format&fit=crop&w=1951&q=80");
+    background-size: cover;
+}
+
+.container {
+    max-width: 1300px;
+}
+
+.white {
+    color: antiquewhite;
+}
+
+.thicc {
+    font-weight: 500;
+}
+
+
+.cBlog {
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+    font-family: Lato;
+    padding: 20px;
+}
+
+.active {
+    text-decoration-color: red;
+    font-weight: bold;
+    color: yellow;
+}
+
+a:link {
+    text-decoration: none;
+}
