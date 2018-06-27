@@ -5,7 +5,7 @@
 
 body {
 	background-image: url("https://images.unsplash.com/photo-1421790879237-3fd1bf6cd1bf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd849741774750e4465a3e0955a98c80&auto=format&fit=crop&w=1951&q=80");
-    background-size: cover;
+    background-attachment: fixed;
 }
 
 .container {
@@ -39,10 +39,16 @@ a:link {
 
 .question {
     font-weight: bold;
+    text-decoration-line: underline;
+    margin-top: 20px;
 }
 
 img.scale-with-grid,
 #content img { 
  max-width: 100%;
  height: auto;
+}
+
+.bioImg{
+    size: 50%;
 }
