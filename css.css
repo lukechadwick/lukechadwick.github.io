@@ -1,6 +1,8 @@
 .nav {
     background-color: rgba(5, 5, 5,0.8);
     padding:10px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+    font-family: Lato;
 }
 
 body {
@@ -21,7 +23,8 @@ body {
 }
 
 .cBlog {
-	background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
 	color: white;
     font-family: Lato;
     padding: 20px;
@@ -29,7 +32,7 @@ body {
 
 .active {
     text-decoration-color: red;
-    font-weight: bold;
+    font-weight: 700;
     color: yellow;
 }
 
@@ -95,4 +98,8 @@ img.scale-with-grid,
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #07070733;}
+.dropdown:hover .dropbtn {
+    background-color: #42424271;
+    border-radius: 5px 5px 5px 5px; 
+    padding: 0 5px 0 5px;
+}
