@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', createEventListeners)
 
+let score = 0;
+let attempts = 0;
+
 function createEventListeners() {
     var beginClick = document.getElementById("begin");
     beginClick.onclick = fetchImage;
@@ -8,22 +11,54 @@ function createEventListeners() {
 }
 
 function fetchImage() {
+    document.getElementById("score").innerHTML = "";
+
+    let hide = document.getElementsByClassName("hidden")
+    for (let i = 0; i < hide.length; i++) {
+        hide[i].style.display = "block";
+    }
+
     let imgToTranslate = getIMG("https://picsum.photos/500/500/?random");
 }
 
 function checkAnswer() {
-  //string cmp
-  let aiAnswer = document.getElementById("translation").innerHTML;
-  let answer = document.getElementById("answer").value;
+    let aiAnswer = document.getElementById("translation").innerHTML;
+    let answer = document.getElementById("answer").value;
 
-  if (aiAnswer == answer){
-    alert("win")
-    fetchImage();
-  }
-  else{
-    alert("fail")
-    fetchImage();
-  }
+    document.getElementById("translation").innerHTML = "";
+    document.getElementById("target").innerHTML = "";
+    document.getElementById("detected").innerHTML = "AI Detected Image: ";
+    document.getElementById("confidence").innerHTML = "AI Confidence: ";
+
+    attempts += 1;
+
+    if (aiAnswer == answer) {
+        console.log("correct answer")
+        fetchImage();
+        score += 1;
+
+    } else {
+        console.log("incorrect answer")
+        fetchImage();
+    }
+    console.log("score: " + score);
+    console.log("attempts: " + (attempts));
+
+    if (attempts == 10) {
+
+        let hide = document.getElementsByClassName("hidden")
+        for (let i = 0; i < hide.length; i++) {
+            hide[i].style.display = "none";
+        }
+        gameOver();
+    }
+}
+
+function gameOver() {
+    //alert("Game Over, Score: " + score + "/10");
+    document.getElementById("score").innerHTML = "Game Over, Score: " + score + "/10";
+    score = 0;
+    attempts = 0;
 }
 
 function startTranslate() {
@@ -94,11 +129,14 @@ function recognition(src) {
         var i = JSON.parse(e.response);
         value = i.responses[0].labelAnnotations[0]["description"];
         value2 = i.responses[0].labelAnnotations[0]["score"];
-        value3 = Math.round( (value2 *= 100) * 10 ) / 10
+        value3 = Math.round((value2 *= 100) * 10) / 10
 
         document.getElementById("target").innerHTML = value;
         document.getElementById("detected").innerHTML = "AI Detected Image: " + value;
         document.getElementById("confidence").innerHTML = "AI Confidence: " + value3 + "%";
+
+        document.getElementById("cScore").innerHTML = "Current Score: " + score;
+        document.getElementById("cAttempts").innerHTML = "Current Attempts: " + attempts;
 
         startTranslate();
     };
