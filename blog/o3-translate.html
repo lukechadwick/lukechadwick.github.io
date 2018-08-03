@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lukes Blog</title>
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+		<link rel="stylesheet" type="text/css" href="../css.css">
+		<script src="../translate.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row nav">
+				<div class="three columns"><strong><a href="../index.html"><\> Luke's Blog 回家</a></strong></div>
+				<div class="one column">
+					<p></p>
+				</div>
+				<div class="two columns">
+					<div class="dropdown">
+						<p class="dropbtn">Technical Blogs</p>
+						<div class="dropdown-content">
+							<a href="t2-html-css-dom-p1.html">HTML/CSS/DOM Part 1</a>
+							<a href="t2-html-css-dom-p2.html">HTML/CSS/DOM Part 2</a>
+							<a href="t3-design-to-web-blog.html">Design to Web</a>
+							<a href="t4-javascript-basics.html">Javascript Basics</a>
+							<a href="t5-problem-solving.html">Problem Solving</a>
+							<a href="t6-js-language.html">JS Language</a>
+							<a href="t6-scope.html">Scope</a>
+						</div>
+					</div>
+				</div>
+				<div class="two columns">
+					<div class="dropdown">
+						<p class="dropbtn active">Cultural Blogs</p>
+						<div class="dropdown-content">
+							<a href="c1-reflection-blog.html">Reflection Blog</a>
+							<a href="c2-emotional-intelligence.html">Emotional Intelligence</a>
+							<a href="c3-meditation-process.html">Meditation Process</a>
+							<a href="c4-daily-mindfulness.html">Daily Mindfulness</a>
+							<a href="c5-self-confidence.html">Self Confidence</a>
+							<a href="c6-control.html">Control</a>
+							<a href="c7-motivation.html">Motivation</a>
+							<a href="c8-connecting.html">Connecting</a>
+							<a href="c9-leadership.html">Leadership</a>
+						</div>
+					</div>
+				</div>
+				<div class="two columns">
+					<div class="dropdown">
+						<p class="dropbtn">Personal Blogs</p>
+						<div class="dropdown-content">
+							<a href="p1-china-snaps.html">China Snaps</a>
+							<a href="../index.html">Personal Blog 2</a>
+							<a href="../index.html">Personal Blog 3</a>
+						</div>
+					</div>
+				</div>
+				<div class="two columns">
+					<div class="dropdown">
+						<p class="dropbtn">Other Stuff</p>
+						<div class="dropdown-content">
+							<a href="https://lukechadwick.github.io/minesweeper/">Play Minesweeper</a>
+							<a href="https://lukechadwick.github.io/js-calculator/index.html">Calculator</a>
+							<a href="../index.html">Placeholder 3</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="container cBlog">
+			<h1>这是什么? || What is this?</h1>
+			<h2>Translate the image</h2>
+			<div class="row">
+				<div class="two columns"><input id="begin" class="button-primary" type="button" value="Begin!"></div>
+				<div class="one column"><p>Language:</p></div>
+				<div class="three columns">
+					<select class="u-full-width" id="languageSelect">
+						<option value="zh-CN">Chinese (Simplified)</option>
+						<option value="zh-TW">Chinese (Traditional)</option>
+						<option value="ja">Japanese</option>
+						<option value="ko">Korean</option>
+						<option value="mi">Maori</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="nine columns"><img class="scale-with-grid" id="imgTranslate" src="" alt=""></div>
+				<div class="three columns">
+					Diagnostics:
+					<p id="detected"></p>
+					<p id="confidence"></p>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+					<div class="two columns"><h3>Word:</h3></div>
+					<div class="two columns"><h3 id="target"></h3></div>
+			</div>
+			<div class="row">
+					<div class="two columns"><h3>Answer:</h3></div>
+					<div class="three columns"><h3 class="blur" id="translation"></h3></div>
+			</div>
+
+
+			<br>
+			<input type="answer" id="answer">
+			<input id="submit-answer" class="button-primary" type="submit" value="Submit">
+		</div>
+	</body>
+</html>

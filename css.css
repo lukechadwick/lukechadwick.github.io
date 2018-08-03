@@ -4,75 +4,57 @@
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
     font-family: Lato;
 }
-
 body {
-	background-image: url("https://images.unsplash.com/photo-1421790879237-3fd1bf6cd1bf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd849741774750e4465a3e0955a98c80&auto=format&fit=crop&w=1951&q=80");
+    background-image: url("https://images.unsplash.com/photo-1421790879237-3fd1bf6cd1bf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd849741774750e4465a3e0955a98c80&auto=format&fit=crop&w=1951&q=80");
     background-attachment: fixed;
 }
-
 .container {
     max-width: 1100px;
 }
-
 .white {
     color: antiquewhite;
 }
-
 .thicc {
     font-weight: 500;
 }
-
 .cBlog {
     background-color: rgba(0,0,0,0.5);
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
-	color: white;
+    color: white;
     font-family: Lato;
     padding: 20px;
 }
-
 .active {
     text-decoration-color: red;
     font-weight: 700;
     color: yellow;
 }
-
 a:link {
     text-decoration: none;
 }
-
 .question {
     font-weight: bold;
     text-decoration-line: underline;
     margin-top: 20px;
 }
-
-img.scale-with-grid,
-#content img { 
- max-width: 100%;
- height: auto;
+img.scale-with-grid, #content img {
+    max-width: 100%;
+    height: auto;
 }
-
 .bioImg{
     size: 50%;
 }
-
-
-
-
 /* Dropdown Button */
 .dropbtn {
     color: rgb(236, 199, 105);
     font-size: 16px;
     margin-bottom: 0;
-
 }
-
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
 }
-
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
@@ -82,7 +64,6 @@ img.scale-with-grid,
     box-shadow: 15px 15px 15px 0px rgba(0,0,0,0.4);
     z-index: 1;
 }
-
 /* Links inside the dropdown */
 .dropdown-content a {
     color: orangered;
@@ -90,26 +71,36 @@ img.scale-with-grid,
     text-decoration: none;
     display: block;
 }
-
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: rgba(221, 221, 221, 0.075);}
-
+.dropdown-content a:hover {
+   background-color: rgba(221, 221, 221, 0.075);
+}
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
+.dropdown:hover .dropdown-content {
+   display: block;
+}
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: #42424271;
-    border-radius: 5px 5px 5px 5px; 
+    border-radius: 5px 5px 5px 5px;
     padding: 0 5px 0 5px;
 }
-
-
-
-
-.simg { 
- transition: all .2s ease-in-out; 
+.simg {
+    transition: all .2s ease-in-out;
 }
-.simg:hover { 
- transform: scale(1.5); 
+.simg:hover {
+    transform: scale(1.5);
+}
+.blur {
+    color: transparent;
+    font-weight: bold;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
+}
+.blur:hover {
+    color: white;
+    font-weight: normal;
+    text-shadow: 0px 0px 0px rgba(255, 255, 255, 1);
+}
+.hidden{
+    
 }
