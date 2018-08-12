@@ -7,7 +7,6 @@
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
 		<link rel="stylesheet" type="text/css" href="../css.css">
-		<script src="../translate.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -70,51 +69,11 @@
 			</div>
 		</div>
 		<br>
-		<div class="container cBlog">
-			<h1>这是什么? || What is this?</h1>
-			<h2>Translate the image</h2>
-			<div class="row">
-				<div class="two columns"><input id="begin" class="button-primary" type="button" value="Begin!"></div>
-				<div class="two columns"><h5>Language:</h5></div>
-				<div class="three columns">
-					<select class="u-full-width" id="languageSelect">
-						<option value="zh-CN">Chinese (Simplified)</option>
-						<option value="zh-TW">Chinese (Traditional)</option>
-						<option value="ja">Japanese</option>
-						<option value="ko">Korean</option>
-						<option value="mi">Māori (te reo)</option>
-						<option value="de">German</option>
-						<option value="es">Spanish</option>
-						<option value="fr">French</option>
-					</select>
-				</div>
-			</div>
-			<div class="row hidden">
-				<div class="nine columns"><img class="scale-with-grid" id="imgTranslate" src="" alt=""></div>
-				<div class="three columns">
-					Diagnostics:
-					<p id="detected"></p>
-					<p id="confidence"></p>
-					<p id="cScore"></p>
-					<p id="cAttempts"></p>
-				</div>
-			</div>
-			<br>
-			<div class="row hidden">
-					<div class="two columns"><h3>Word:</h3></div>
-					<div class="three columns"><h3 id="target"></h3></div>
-			</div>
-			<div class="row hidden">
-					<div class="two columns"><h3>Answer:</h3></div>
-					<div class="three columns"><h3 class="blur" id="translation"></h3></div>
-			</div>
-			<br>
-			<div class="row hidden">
-					<div class="two columns"><h5>Your Answer:</h5></div>
-					<div class="three columns"><input type="answer" id="answer"></div>
-					<div class="three columns"><input id="submit-answer" class="button-primary" type="submit" value="Submit"></div>
-			</div>
-			<h3 id="score"></h3>
+		<div class="container cBlog">			
+			<div id="container"></div>
+			<div class="two columns"><input id="begin" class="button-primary" type="button" value="Restart!"></div>
+			<div class="two columns"><h5>Petri-Dish</h5></div>
 		</div>
+		<script src="../bundle.js"></script>
 	</body>
 </html>
