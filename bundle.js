@@ -70,7 +70,7 @@ const createBoard = require('./createBoard')
 const nextBoard = require('./nextBoard')
 const displayBoard = require('./displayBoard')
 
-const size = 30
+const size = 100
 const framesPerSecond = 15
 
 
@@ -101,7 +101,7 @@ function drawGrid() {
   for (var i = 0; i < size; i++) {
       for (var j = 0; j < size; j++) {
           var div = document.createElement("div");
-          let boxSize = 16;
+          let boxSize = 5;
           div.id = "r" + i + "c" + j;
 
           div.style.width = boxSize + "px";
