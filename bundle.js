@@ -15,33 +15,26 @@ module.exports = countAliveNeighbours
 function createBoard (size) {
 
 var matrix = [];
+
 for(var i=0; i<size; i++) {
     matrix[i] = new Array(size);
     matrix[i].fill();
 }
-    
-
-  //  console.log(randomx);
-  //  console.log(randomx);
-    
-
     return matrix;
 }
 
 module.exports = createBoard
-
 },{}],3:[function(require,module,exports){
 function displayBoard (board) {
+    for (let x = 0; x < board.length; x++) {
+        for (let y = 0; y < board.length; y++) {
+            if (board[x][y])
+            document.getElementById("r" + x + "c" + y).style.background = "red";
+            else
+            document.getElementById("r" + x + "c" + y).style.background = "green";
 
-for (let x = 0; x < board.length; x++) {
-    for (let y = 0; y < board.length; y++) {
-        if (board[x][y])
-        document.getElementById("r" + x + "c" + y).style.background = "red";
-        else
-        document.getElementById("r" + x + "c" + y).style.background = "green";
-
-    }  
-}
+        }  
+    }
 }
 
 module.exports = displayBoard
@@ -51,6 +44,7 @@ const indicesAreOutOfBounds = require('./indicesAreOutOfBounds')
 
 getNeighbours = (cellRow, cellColumn, board) => {
     let surroundingNeighbours = [];
+    
     for (let x = -1; x <= 1; x++) {
         for (let y = -1; y <= 1; y++) {
             if (y === 0 && x === 0){
@@ -203,23 +197,20 @@ const isOverPopulated = require('./isOverPopulated')
 const isUnderPopulated = require('./isUnderPopulated')
 const isRessurectable = require('./isRessurectable')
 
-function nextCellState (cellState, neighbourCount) {
-
-    if (isOverPopulated(neighbourCount) && cellState) {
-        return false
-      }
-       if (isUnderPopulated(neighbourCount) && cellState) {
-        return false
-      }
-       if (isRessurectable(neighbourCount) && !cellState) {
-        return true
-      }
-       if (!isUnderPopulated(neighbourCount) && !isOverPopulated(neighbourCount) && cellState) {
-        return true
-      }
-
-      else return false;
-    }
+function nextCellState(cellState, neighbourCount) {
+  
+	if (isOverPopulated(neighbourCount) && cellState) {
+		return false
+	}
+	if (isUnderPopulated(neighbourCount) && cellState) {
+		return false
+	}
+	if (isRessurectable(neighbourCount) && !cellState) {
+		return true
+	}
+	if (!isUnderPopulated(neighbourCount) && !isOverPopulated(neighbourCount) && cellState) {
+		return true
+	} else return false;
+}
 module.exports = nextCellState
-
 },{"./isOverPopulated":8,"./isRessurectable":9,"./isUnderPopulated":10}]},{},[5]);
