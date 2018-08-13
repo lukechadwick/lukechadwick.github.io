@@ -105,6 +105,15 @@ img.scale-with-grid, #content img {
     display: none;
 }
 
+.pInput{
+    width: 60px;
+}
+
+.leftAlign{
+    float: left;
+    margin: 5px;
+}
+
 #container div {
     float: left;
     vertical-align:top;
